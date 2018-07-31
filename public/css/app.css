@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: "Font-Regular";
-    src: url('/fonts/Font-Regular.ttf');
+    font-family: "Lato Regular";
+    src: url('/fonts/lato/Lato-Regular.ttf');
 }
 
 .bg-primary {
@@ -113,7 +113,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, p {
-    font-family: "Aller Regular";
+    font-family: "Lato Regular";
 }
 
 h1 {

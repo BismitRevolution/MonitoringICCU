@@ -1,0 +1,27 @@
+body {
+    background: black;
+}
+
+.ct-point {
+    stroke-linecap: unset;
+}
+
+.ct-label {
+    color: var(--color-light);
+}
+
+#temperature-current, #temperature-title {
+    color: #6DECE0 !important;
+}
+
+#temperature .ct-line {
+    stroke: #6DECE0 !important;
+}
+
+#heartbeat-current, #heartbeat-title {
+    color: #ECCD01 !important;
+}
+
+#heartbeat .ct-line {
+    stroke: #ECCD01 !important;
+}
