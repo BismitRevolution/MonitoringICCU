@@ -21,6 +21,8 @@
         <!-- <link rel="stylesheet" href="{{ asset('css/vendor/lightbox.css') }}"> -->
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{ asset('css/vendor/fontawesome-all.css') }}">
+        <!-- Chartist -->
+        <link rel="stylesheet" href="{{ asset('css/vendor/chartist.css') }}">
         <!-- Basic Style -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <!-- Navbar Style -->
@@ -65,6 +67,8 @@
         <!-- Font Awesome -->
         <script type="application/javascript" src="{{ asset('js/vendor/fontawesome-all.js') }}"></script>
 
+        <!-- Chartist -->
+        <script type="application/javascript" src="{{ asset('js/vendor/chartist.min.js') }}"></script>
         <!-- Fred Carousel -->
         <!-- <script type="application/javascript" src="{{ asset('js/vendor/jquery.carouFredSel.js') }}"></script> -->
 

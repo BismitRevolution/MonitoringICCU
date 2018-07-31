@@ -17,6 +17,8 @@
 
 Route::get('/', 'PageController@index')->name('index');
 
+Route::get('/monitor', 'MonitorController@index')->name('monitor');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
