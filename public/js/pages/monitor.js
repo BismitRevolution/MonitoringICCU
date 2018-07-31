@@ -53,7 +53,7 @@ $(document).ready(function() {
         beatChart.update(beatSeries);
         tempChart.update(tempSeries);
         console.log('updated');
-        setTimeout(render, 500);
+        setTimeout(render, 1000);
     }
 
     render();

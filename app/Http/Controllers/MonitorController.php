@@ -9,4 +9,8 @@ class MonitorController extends Controller
     public function index() {
         return view('pages/monitor');
     }
+
+    public function retrieve() {
+        
+    }
 }
