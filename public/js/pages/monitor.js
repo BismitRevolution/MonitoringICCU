@@ -36,12 +36,10 @@ $(document).ready(function() {
         }
     });
 
-    function render() {
-        retrive();
-
-        var newBeat = getRandomInt(1, 200);
+    function update(newBeat, newTemp) {
+        // var newBeat = getRandomInt(1, 200);
         document.getElementById('heartbeat-current').innerHTML = newBeat;
-        var newTemp = getRandomInt(1, 50);
+        // var newTemp = getRandomInt(1, 50);
         document.getElementById('temperature-current').innerHTML = newTemp;
         heartbeat.push(newBeat);
         temperature.push(newTemp);
@@ -54,7 +52,34 @@ $(document).ready(function() {
         };
         beatChart.update(beatSeries);
         tempChart.update(tempSeries);
-        console.log('updated');
+    }
+
+    function retrieve() {
+        console.log('retrieved');
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("demo").innerHTML = this.responseText;
+                var arrayResponse = JSON.parse(this.responseText);
+                var beatArray = arrayResponse.heartbeat;
+                var tempArray = arrayResponse.temperature;
+                var lastBeat = beatArray[beatArray.length-1].value;
+                var lastTemp = tempArray[tempArray.length-1].value;
+                // var a;
+                // for (a = 0; a < arrayResponse.length; a++) {
+                //     console.log(arrayResponse[a].value);
+                // }
+                update(lastBeat, lastTemp);
+                // console.log('LastData: ' + last);
+            }
+        };
+        xhttp.open("GET", "/retrieve", true);
+        xhttp.send();
+    }
+
+    function render() {
+        retrieve();
+        console.log('rendered');
         setTimeout(render, 1000);
     }
 

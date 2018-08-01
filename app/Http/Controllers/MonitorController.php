@@ -31,11 +31,19 @@ class MonitorController extends Controller
                         ->select('value')
                         ->where('customer_id', 1)
                         ->get();
-        // dd(json_decode(json_encode($heartbeat), true));
-        return json_decode(json_encode($heartbeat), true);
-        // return response()->json([
-        //     'name' => '',
-        //     '' => '',
-        // ]);
+
+        $temperature = DB::table('temperature')
+                        ->select('value')
+                        ->where('customer_id', 1)
+                        ->get();
+                        
+        $result = array(
+            'heartbeat' => $heartbeat,
+            'temperature' => $temperature,
+        );
+        // $result->heartbeat = $heartbeat;
+        // $result->temperature = $temperature;
+        // dd(json_decode(json_encode($result), true));
+        return json_decode(json_encode($result), true);
     }
 }
