@@ -30,5 +30,6 @@
 @endsection
 
 @section('extra-js')
+<script type="application/javascript" src="{{ asset('js/data.js') }}"></script>
 <script type="application/javascript" src="{{ asset('js/pages/monitor.js') }}"></script>
 @endsection

@@ -37,6 +37,8 @@ $(document).ready(function() {
     });
 
     function render() {
+        retrive();
+
         var newBeat = getRandomInt(1, 200);
         document.getElementById('heartbeat-current').innerHTML = newBeat;
         var newTemp = getRandomInt(1, 50);

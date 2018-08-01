@@ -18,6 +18,8 @@
 Route::get('/', 'PageController@index')->name('index');
 
 Route::get('/monitor', 'MonitorController@index')->name('monitor');
+Route::get('/generate', 'MonitorController@generate')->name('generate');
+Route::get('/retrieve', 'MonitorController@retrieve')->name('retrieve');
 
 Auth::routes();
 
